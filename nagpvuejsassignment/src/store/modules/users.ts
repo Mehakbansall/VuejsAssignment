@@ -1,6 +1,6 @@
 import {VuexModule, getModule, Module, MutationAction, Action } from 'vuex-module-decorators';
 import store from '@/store';
-import { User, Profile, UserSubmit, UserForUpdate } from '../models';
+import { User, Profile, UserSubmit, UserForUpdate, UserRegister } from '../models';
 import { loginUser, registerUser,fetchProfile, updateUser, setToken, fetchUser } from '../api';
 
 @Module({
@@ -26,7 +26,7 @@ class UsersModule extends VuexModule {
     }
 
     @MutationAction
-    async register(userSubmit: UserSubmit) {
+    async register(userSubmit: UserRegister) {
             const user  = await registerUser(userSubmit);
             setToken(user.token);
             return {user}; 
