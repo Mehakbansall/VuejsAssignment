@@ -50,11 +50,11 @@ export default class Register extends Vue {
       username: this.username,
       email: this.email,
       password: this.password,
-    }).then(() => this.$router.push('/'))
-    .catch((err) => {
-      console.error(err);
-      this.loginError = "Invalid Username or password";
-    })
+    }).then(() => this.$router.push('/'));
+    // .catch((err) => {
+    //   console.error(err);
+    //   this.loginError = "Invalid Username or password";
+    // })
   }
 }
 </script>
