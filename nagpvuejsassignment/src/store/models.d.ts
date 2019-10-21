@@ -26,6 +26,12 @@ export interface UserSubmit{
     password: string;
 }
 
+export interface UserRegister{
+  username: string;
+  email:string;
+  password: string;
+}
+
 export interface UserResponse{
   user: User;
 }
